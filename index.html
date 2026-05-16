@@ -1,40 +1,61 @@
 <!DOCTYPE html>
 <html lang='en'>
+
 <head>
-  <meta charset='UTF-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <title>University Login</title>
-  <link rel="stylesheet" href="./index.css">
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>University Registration</title>
+    <link rel="stylesheet" href="./index.css">
 </head>
+
 <body>
-  <main class='container'>
-    <section class='hero'>
-      <p>UIET Kathua</p>
-      <h1>Student Admission Portal Login</h1>
-      <p>Login to check your admission status</p>
-    </section>
-    <section class='card'>
-      <form action='#' method='post'>
-        <div class='field'>
-          <label for='student-id'>Enter Registered Email ID</label>
-          <input type='email' id='student-id' name='student-id' placeholder='Email ID' required>
+    <main class='container'>
+        <section class='hero'>
+            <h1>UIET Kathua</h1>
+            <p>Create your student account with the details below.</p>
+        </section>
+        <section class='card'>
+            <form action='#' method='post'>
+                <div class='field'>
+                    <label for='full-name'>Full Name</label>
+                    <input type='text' id='full-name' name='full-name' placeholder='Enter Name' required>
+                </div>
+                <div class='field'>
+                    <label>Date of Birth</label>
+                    <div class='dob'>
+                        <input type='number' name='dob-day' placeholder='DD' min='1' max='31' required>
+                        <input type='number' name='dob-month' placeholder='MM' min='1' max='12' required>
+                        <input type='number' name='dob-year' placeholder='YYYY' min='1900' max='2024' required>
+                    </div>
+                </div>
+                <div class='field'>
+                    <label for='email'>Email Address</label>
+                    <input type='email' id='email' name='email' placeholder='you@domain.com' required>
+                </div>
+                <div class='field'>
+                    <label for='mobile'>Mobile Number</label>
+                    <input type='tel' id='mobile' name='mobile' placeholder='Mobile Number' required>
+                </div>
+                <div class='row'>
+                    <div class='field'>
+                        <label for='password'>Password</label>
+                        <input type='password' id='password' name='password' placeholder='Create a password' required>
+                    </div>
+                    <div class='field'>
+                        <label for='confirm-password'>Confirm Password</label>
+                        <input type='password' id='confirm-password' name='confirm-password'
+                            placeholder='Confirm password' required>
+                    </div>
+                </div>
+                <div class='actions'>
+                    <button type='submit'>Register</button>
+                </div>
+            </form>
+        </section>
+        <div class='footer'>
+            Already registered? <a href='index.html'>Sign in</a>.
         </div>
-        <div class='field'>
-          <label for='password'>Password</label>
-          <input type='password' id='password' name='password' placeholder='Enter your password' required>
-        </div>
-        <div class='actions'>
-          <button type='submit'>Sign In</button>
-        </div>
-        <div class='links'>
-          <a href='#'>Forgot Password?</a>
-          <a href='#'>Need Help?</a>
-        </div>
-      </form>
-    </section>
-    <div class='footer'>
-      Not registered? <a href='register.html'>Register Now</a>
-    </div>
-  </main>
+    </main>
 </body>
+
 </html>
